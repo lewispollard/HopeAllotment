@@ -4,16 +4,20 @@
   "version": "4.0.0",
   "author": "Taylor Bryant <taylor@bryant.io>",
   "dependencies": {
+    "@ccalamos/gatsby-source-googlemaps-static": "^1.4.8",
     "gatsby": "2.24.77",
     "gatsby-plugin-manifest": "2.4.34",
     "gatsby-plugin-offline": "3.2.31",
     "gatsby-plugin-postcss": "2.3.13",
     "gatsby-plugin-react-helmet": "3.3.14",
     "gatsby-plugin-sharp": "2.6.42",
+    "google-map-react": "^2.1.8",
+    "google-maps-react": "^2.0.6",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "6.1.0",
+    "react-pdf": "^5.0.0",
     "react-responsive-spritesheet": "^2.3.9"
   },
   "keywords": [
@@ -44,9 +48,10 @@
     "babel-eslint": "10.1.0",
     "cssnano": "4.1.10",
     "eslint": "7.11.0",
+    "eslint-config-prettier": "6.12.0",
     "eslint-loader": "4.0.2",
     "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-react": "7.21.4",
+    "eslint-plugin-react": "^7.21.4",
     "gatsby-plugin-eslint": "2.0.8",
     "prettier": "2.1.2",
     "tailwindcss": "1.9.1"

@@ -7,50 +7,63 @@ function ContactPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`hope`, `community`, `allotment`, `volunteers`]}
         title="Contact"
       />
       <section>
-        <form className="mx-auto md:w-1/2">
-          <p className="mb-8 leading-loose">
-            Here is an example of a form built using the official Tailwind CSS
-            Custom Forms plugin.{` `}
-            <a
-              className="font-bold text-gray-700 no-underline"
-              href="https://github.com/tailwindcss/custom-forms"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read the docs
-            </a>
-            .
+        <div className="md:w-2/3 mx-auto text-justify px-4">
+          <p className="mb-2">
+            We want the people of Sheffield to get involved with our allotments.
+            We are always looking for new people who want to take an active role
+            in our group.
           </p>
-
+          <p className="mb-2"></p>
+          <p className="mb-2">
+            If you want to meet new people, get more exercise, or simply have a
+            keen interest in gardening, we want to hear from you.
+          </p>
+          <p className="mb-6">Please leave a contact message below.</p>
+        </div>
+        <form className="mx-auto md:w-1/2">
           <label
             className="block mb-2 text-xs font-bold uppercase"
-            htmlFor="first-name"
+            htmlFor="name"
           >
-            First Name
+            Name
           </label>
 
           <input
             className="w-full mb-6 form-input"
-            id="first-name"
-            placeholder="Bill"
+            id="name"
+            placeholder="Hope Patterson"
             type="text"
           />
 
           <label
             className="block mb-2 text-xs font-bold uppercase"
-            htmlFor="last-name"
+            htmlFor="email"
           >
-            Last Name
+            Email
           </label>
 
           <input
             className="w-full mb-6 form-input"
-            id="last-name"
-            placeholder="Murray"
+            id="email"
+            placeholder="hope@gmail.com"
+            type="text"
+          />
+
+          <label
+            className="block mb-2 text-xs font-bold uppercase"
+            htmlFor="phone"
+          >
+            Phone
+          </label>
+
+          <input
+            className="w-full mb-6 form-input"
+            id="phone"
+            placeholder="0114"
             type="text"
           />
 
