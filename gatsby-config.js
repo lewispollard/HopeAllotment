@@ -4,6 +4,7 @@ const tailwindConfig = require("./tailwind.config.js");
 const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
+  pathPrefix: "/HopeAllotment",
   siteMetadata: {
     title: `Hope Community Allotment`,
     description: `Home of the Hope community allotment project, Sheffield, UK.`,
