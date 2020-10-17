@@ -4,6 +4,7 @@ import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 
 import Leaflet from "../../public/downloads/Leaflet_A4_2015.pdf";
 import Brochure from "../../public/downloads/Brochure - user.pdf";
+import BrochureImg from "../images/brochure_front.png";
 
 const LeafletsPage = () => {
   return (
@@ -43,17 +44,13 @@ const LeafletsPage = () => {
             </Document>
           </a>
         </div>
-
-        <div className="mx-auto">
+        <hr />
+        <div className="mx-auto text-center mt-6">
           <a href={Brochure} target="_blank" rel="noopener noreferrer" download>
             <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
               Brochure
             </h2>
-            <Document file={Brochure}>
-              <Page pageNumber={1} />
-              <hr />
-              <Page pageNumber={2} />
-            </Document>
+            <img src={BrochureImg} className="mx-auto" />
           </a>
         </div>
       </main>
