@@ -53,7 +53,7 @@ const CommitteePage = () => {
           Session Leaders
         </h1>
 
-        <ul className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide md:pl-20  text-center w-2/3">
+        <ul className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-center w-2/3">
           <li>Mary Goodlad</li>
 
           <li>Sheena Clarke</li>
@@ -69,7 +69,7 @@ const CommitteePage = () => {
           Committee members
         </h1>
 
-        <ul className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide md:pl-12  text-center w-2/3">
+        <ul className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide  text-center w-2/3">
           <li>Phil Webster - Company Secretary</li>
           <li>Brian Perrozzi - Chair</li>
           <li>Sheena Clarke - Treasurer</li>
