@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const resolveConfig = require("tailwindcss/resolveConfig");
 const tailwindConfig = require("./tailwind.config.js");
 
