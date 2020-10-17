@@ -38,7 +38,7 @@ function ContactPage() {
           <input
             className="w-full mb-6 form-input"
             id="name"
-            placeholder="Hope Patterson"
+            placeholder="Your Name"
             type="text"
           />
 
@@ -52,7 +52,7 @@ function ContactPage() {
           <input
             className="w-full mb-6 form-input"
             id="email"
-            placeholder="hope@gmail.com"
+            placeholder="Your Email"
             type="text"
           />
 
@@ -66,7 +66,7 @@ function ContactPage() {
           <input
             className="w-full mb-6 form-input"
             id="phone"
-            placeholder="0114"
+            placeholder="Your Phone Number"
             type="text"
           />
 
