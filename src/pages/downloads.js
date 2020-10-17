@@ -13,6 +13,8 @@ const LeafletsPage = () => {
           __html: `
         .react-pdf__Page__canvas {
           margin: 0 auto;
+          max-width: 100%;
+          max-height: 100vh;
         }
       `,
         }}
@@ -31,7 +33,7 @@ const LeafletsPage = () => {
           View leaflets on this page, and click them to download a PDF.
         </p>
 
-        <div className="mx-auto">
+        <div className="mx-auto max-w-screen-sm">
           <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
             Poster
           </h2>
