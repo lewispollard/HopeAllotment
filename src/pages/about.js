@@ -1,6 +1,8 @@
 import React from "react";
 import { Layout, SEO } from "../components";
 
+import PumpkinPic from "../images/steffi-pereira-Pv_Mut-lvWg-unsplash.jpg";
+
 const CommitteePage = () => {
   return (
     <Layout>
@@ -9,6 +11,12 @@ const CommitteePage = () => {
         title="Committee"
       />
       <main className="text-center">
+        <img
+          alt="A pumpkin growing"
+          className="block w-2/3 mx-auto mb-8 rounded-xl shadow-lg"
+          src={PumpkinPic}
+        />
+
         <h1 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
           WHO WE ARE &amp; WHAT OUR AIMS ARE
         </h1>

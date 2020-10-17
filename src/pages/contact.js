@@ -10,7 +10,10 @@ function ContactPage() {
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
         title="Contact"
       />
-      <section>
+      <section className="text-center">
+        <h2 className="inline-block p-3 mb-4 text-2xl mx-auto font-bold bg-yellow-400 uppercase">
+          Contact Us
+        </h2>
         <div className="md:w-2/3 mx-auto text-justify px-4">
           <p className="mb-2">
             We want the people of Sheffield to get involved with our allotments.
@@ -26,7 +29,7 @@ function ContactPage() {
         </div>
         <form className="mx-auto md:w-1/2">
           <label
-            className="block mb-2 text-xs font-bold uppercase"
+            className="block mb-2 text-xs text-left font-bold uppercase"
             htmlFor="name"
           >
             Name
@@ -40,7 +43,7 @@ function ContactPage() {
           />
 
           <label
-            className="block mb-2 text-xs font-bold uppercase"
+            className="block mb-2 text-xs text-left font-bold uppercase"
             htmlFor="email"
           >
             Email
@@ -54,7 +57,7 @@ function ContactPage() {
           />
 
           <label
-            className="block mb-2 text-xs font-bold uppercase"
+            className="block mb-2 text-xs text-left font-bold uppercase"
             htmlFor="phone"
           >
             Phone
@@ -68,7 +71,7 @@ function ContactPage() {
           />
 
           <label
-            className="block mb-2 text-xs font-bold uppercase"
+            className="block mb-2 text-xs text-left font-bold uppercase"
             htmlFor="message"
           >
             Message

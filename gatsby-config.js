@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     title: `Hope Community Allotment`,
     description: `Home of the Hope community allotment project, Sheffield, UK.`,
-    author: `@taylorbryant`,
+    author: `Hope Community Allotment`,
   },
   plugins: [
     `gatsby-plugin-eslint`,
@@ -17,13 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
-        short_name: `starter`,
+        name: `Hope Community Allotment`,
+        short_name: `Hope`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.teal["400"],
         display: `minimal-ui`,
-        icon: `src/images/tailwind-icon.png`,
+        icon: `src/images/bigleaf.png`,
       },
     },
     {

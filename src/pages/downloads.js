@@ -34,10 +34,10 @@ const LeafletsPage = () => {
         </p>
 
         <div className="mx-auto max-w-screen-sm">
-          <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
-            Poster
-          </h2>
           <a href={Leaflet} target="_blank" rel="noopener noreferrer" download>
+            <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
+              Poster
+            </h2>
             <Document file={Leaflet} className="mx-auto text-center">
               <Page pageNumber={1} className="mx-auto text-center" />
             </Document>
@@ -45,10 +45,10 @@ const LeafletsPage = () => {
         </div>
 
         <div className="mx-auto">
-          <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
-            Brochure
-          </h2>
           <a href={Brochure} target="_blank" rel="noopener noreferrer" download>
+            <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
+              Brochure
+            </h2>
             <Document file={Brochure}>
               <Page pageNumber={1} />
               <hr />
