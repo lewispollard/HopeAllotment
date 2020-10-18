@@ -52,8 +52,7 @@ npm run deploy
 - [ESLint documentation](https://eslint.org/docs/user-guide/configuring)
 
 ## License
-
-[MIT](https://github.com/lewispollard/HopeAllotment/blob/develop/LICENSE.md)
+[MIT](https://github.com/lewispollard/HopeAllotment/blob/develop/LICENSE)
 
 ## How you can help
 
