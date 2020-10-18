@@ -1,19 +1,20 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import Header from "./header";
+import Header from "../components/header";
+import Transition from "../components/transition";
 
-function Layout({ children }) {
+function Layout({ children, location }) {
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900">
       <Header />
 
-      <main className="flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16">
-        {children}
+      <main className="flex-1 w-full max-w-4xl px-4 py-4 mx-auto md:px-4 md:py-8">
+        <Transition location={location}>{children}</Transition>
       </main>
 
-      <footer className="bg-blue-700">
-        <nav className="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8 text-green-200">
+      <footer className="footerpattern">
+        <nav className="flex justify-between max-w-4xl p-2 mx-auto text-xs tracking-tight leading-tight md:leading-normal md:text-sm md:tracking-normal md:p-3 text-green-200 bg-blue-700 rounded-lg my-2 bg-opacity-85">
           <p className="text-white">Created by volunteers</p>
           <p>
             <a

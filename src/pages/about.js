@@ -1,15 +1,23 @@
 import React from "react";
-import { Layout, SEO } from "../components";
+import { SEO } from "../components";
+
+import PumpkinPic from "../images/steffi-pereira-Pv_Mut-lvWg-unsplash.jpg";
 
 const CommitteePage = () => {
   return (
-    <Layout>
+    <div>
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
-        title="Committee"
+        title="About"
       />
       <main className="text-center">
-        <h1 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
+        <img
+          alt="A pumpkin growing"
+          className="block w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
+          src={PumpkinPic}
+        />
+
+        <h1 className="inline-block p-3 mb-4 text-2xl font-bold headingpattern">
           WHO WE ARE &amp; WHAT OUR AIMS ARE
         </h1>
         <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">
@@ -49,11 +57,11 @@ const CommitteePage = () => {
           </p>
         </div>
 
-        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold bg-yellow-400 mt-6">
+        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold headingpattern mt-6">
           Session Leaders
         </h1>
 
-        <ul className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide md:pl-20  text-justify w-5/12 list-disc">
+        <ul className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-center w-2/3">
           <li>Mary Goodlad</li>
 
           <li>Sheena Clarke</li>
@@ -65,11 +73,11 @@ const CommitteePage = () => {
           <li>Phil Webster </li>
         </ul>
 
-        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold bg-yellow-400 mt-6">
+        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold headingpattern mt-6">
           Committee members
         </h1>
 
-        <ul className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide md:pl-12  text-justify w-5/12 list-disc">
+        <ul className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide  text-center w-2/3">
           <li>Phil Webster - Company Secretary</li>
           <li>Brian Perrozzi - Chair</li>
           <li>Sheena Clarke - Treasurer</li>
@@ -94,7 +102,7 @@ const CommitteePage = () => {
           <li>Mary Goodlad</li>
         </ul>
       </main>
-    </Layout>
+    </div>
   );
 };
 
