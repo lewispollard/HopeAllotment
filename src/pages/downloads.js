@@ -1,6 +1,5 @@
 import React from "react";
-import { Layout, SEO } from "../components";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
+import { SEO } from "../components";
 
 import Leaflet from "../../public/downloads/Leaflet_A4_2015.pdf";
 import Brochure from "../../public/downloads/Brochure - user.pdf";
@@ -9,7 +8,7 @@ import LeafletImg from "../images/leaflet-front.png";
 
 const LeafletsPage = () => {
   return (
-    <Layout>
+    <div>
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -54,7 +53,7 @@ const LeafletsPage = () => {
           </a>
         </div>
       </main>
-    </Layout>
+    </div>
   );
 };
 

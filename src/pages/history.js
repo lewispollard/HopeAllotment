@@ -1,11 +1,11 @@
 import React from "react";
-import { Layout, SEO } from "../components";
+import { SEO } from "../components";
 
 import ToolsPic from "../images/dylan-nolte-dUsmF-F-bJg-unsplash.jpg";
 
 const HistoryPage = () => {
   return (
-    <Layout>
+    <div>
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
         title="History"
@@ -95,7 +95,7 @@ const HistoryPage = () => {
           </p>
         </section>
       </main>
-    </Layout>
+    </div>
   );
 };
 

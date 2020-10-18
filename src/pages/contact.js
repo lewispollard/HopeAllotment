@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 function ContactPage() {
@@ -51,7 +50,7 @@ function ContactPage() {
   };
 
   return (
-    <Layout>
+    <div>
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
         title="Contact"
@@ -159,7 +158,7 @@ function ContactPage() {
           </button>
         </form>
       </section>
-    </Layout>
+    </div>
   );
 }
 

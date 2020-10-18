@@ -1,12 +1,11 @@
 import React from "react";
 
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PlantPic from "../images/plant.jpg";
 
 function IndexPage() {
   return (
-    <Layout>
+    <div>
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
         title="Home"
@@ -56,7 +55,7 @@ function IndexPage() {
           </p>
         </div>
       </section>
-    </Layout>
+    </div>
   );
 }
 

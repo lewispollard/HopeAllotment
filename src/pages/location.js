@@ -1,9 +1,9 @@
 import React from "react";
-import { Layout, SEO, MapContainer } from "../components";
+import { SEO, MapContainer } from "../components";
 
 const LocationPage = () => {
   return (
-    <Layout>
+    <div>
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
         title="Location"
@@ -44,7 +44,7 @@ const LocationPage = () => {
           />
         </section>
       </main>
-    </Layout>
+    </div>
   );
 };
 

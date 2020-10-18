@@ -1,11 +1,11 @@
 import React from "react";
-import { Layout, SEO } from "../components";
+import { SEO } from "../components";
 
 import PumpkinPic from "../images/steffi-pereira-Pv_Mut-lvWg-unsplash.jpg";
 
 const CommitteePage = () => {
   return (
-    <Layout>
+    <div>
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
         title="About"
@@ -102,7 +102,7 @@ const CommitteePage = () => {
           <li>Mary Goodlad</li>
         </ul>
       </main>
-    </Layout>
+    </div>
   );
 };
 

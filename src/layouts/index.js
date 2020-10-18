@@ -1,15 +1,16 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import Header from "./header";
+import Header from "../components/header";
+import Transition from "../components/transition";
 
-function Layout({ children }) {
+function Layout({ children, location }) {
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900">
       <Header />
 
       <main className="flex-1 w-full max-w-4xl px-4 py-4 mx-auto md:px-4 md:py-8">
-        {children}
+        <Transition location={location}>{children}</Transition>
       </main>
 
       <footer className="footerpattern">
