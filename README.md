@@ -26,7 +26,7 @@ Yarn | NPM
 ------------ | -------------
 ``` yarn ``` | ``` npm install ```
 
-#### Install the Gatsby CLI:
+#### Install the Gatsby CLI (optional but recommended):
 
 Yarn | NPM
 ------------ | -------------
