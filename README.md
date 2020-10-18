@@ -20,7 +20,7 @@ After cloning the repository:
 cd HopeAllotment/
 ```
 
-Install dependencies:
+#### Install dependencies:
 
 ```sh
 yarn
@@ -32,7 +32,7 @@ OR
 npm install
 ```
 
-Install the Gatsby CLI:
+#### Install the Gatsby CLI:
 
 ```sh
 yarn global add gatsby-cli
@@ -44,7 +44,7 @@ OR
 npm i --global gatsby-cli
 ```
 
-Run the development server:
+#### Run the development server:
 
 ```sh
 yarn start
@@ -56,7 +56,7 @@ OR
 npm run start
 ```
 
-Deploy (if you have permissions):
+#### Deploy (if you have permissions):
 
 ```sh
 yarn deploy
