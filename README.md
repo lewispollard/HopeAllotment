@@ -61,3 +61,6 @@ Enjoying HOPE allotment and want to help? You can:
 - [Create an issue](https://github.com/lewispollard/HopeAllotment/issues/new) with some constructive criticism
 - [Submit a pull request](https://github.com/lewispollard/HopeAllotment/compare) with some improvements to the project
 
+## Contributers
+
+Based on the `gatsby-starter-tailwind` template by @oddstronaut: https://github.com/oddstronaut/gatsby-starter-tailwind
