@@ -21,29 +21,35 @@ function ContactPage() {
       return;
     }
     setSubmitting(true);
-    const response = await fetch(functionURL, {
-      method: "post",
-      headers: {
-        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-      },
-      body: new URLSearchParams({
-        fromEmail: email,
-        subject: "New message from HOPE allotment website",
-        body: message,
-        name,
-        phone,
-      }).toString(),
-    });
-    if (response.status === 200) {
-      setError(false);
-      setSubmitting(false);
-      setEmail("");
-      setName("");
-      setPhone("");
-      setMessage("");
-      setSuccess("Message sent successfully. Someone will be in touch soon!");
-    } else {
-      const json = await response.json();
+    try {
+      const response = await fetch(functionURL, {
+        method: "post",
+        headers: {
+          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+        },
+        body: new URLSearchParams({
+          fromEmail: email,
+          subject: "New message from HOPE allotment website",
+          body: message,
+          name,
+          phone,
+        }).toString(),
+      });
+      if (response.status === 200) {
+        setError(false);
+        setSubmitting(false);
+        setEmail("");
+        setName("");
+        setPhone("");
+        setMessage("");
+        setSuccess("Message sent successfully. Someone will be in touch soon!");
+      } else {
+        const json = await response.json();
+        setError("Failed to send email. Please try again later.");
+        setSubmitting(false);
+        setSuccess("");
+      }
+    } catch {
       setError("Failed to send email. Please try again later.");
       setSubmitting(false);
       setSuccess("");
