@@ -9,10 +9,10 @@ const LocationPage = () => {
         title="Contact"
       />
       <main className="text-center">
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400 uppercase">
+        <h2 className="inline-block p-3 mb-4 text-2xl font-bold headingpattern uppercase">
           Location
         </h2>
-        <section className="md:w-2/3 mx-auto text-justify px-4 space-y-3">
+        <section className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4 space-y-3">
           <p>
             We rent 4 plots on the{" "}
             <a
@@ -38,7 +38,7 @@ const LocationPage = () => {
             <li>TM Travel: 17, 32</li>
           </ul>
         </section>
-        <section className="w-2/3 mx-auto mt-6">
+        <section className="w-5/6 mx-auto mt-6">
           <MapContainer
             selectedPlace={{ lat: 53.41561155973524, lng: -1.442938707955667 }}
           />

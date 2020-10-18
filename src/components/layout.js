@@ -12,8 +12,8 @@ function Layout({ children }) {
         {children}
       </main>
 
-      <footer className="bg-blue-700">
-        <nav className="flex justify-between max-w-4xl p-4 mx-auto text-xs tracking-tight leading-tight md:leading-normal md:text-sm md:tracking-normal md:p-8 text-green-200">
+      <footer className="footerpattern">
+        <nav className="flex justify-between max-w-4xl p-2 mx-auto text-xs tracking-tight leading-tight md:leading-normal md:text-sm md:tracking-normal md:p-3 text-green-200 bg-blue-700 rounded-lg my-2 bg-opacity-85">
           <p className="text-white">Created by volunteers</p>
           <p>
             <a

@@ -5,6 +5,7 @@ import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import Leaflet from "../../public/downloads/Leaflet_A4_2015.pdf";
 import Brochure from "../../public/downloads/Brochure - user.pdf";
 import BrochureImg from "../images/brochure_front.png";
+import LeafletImg from "../images/leaflet-front.png";
 
 const LeafletsPage = () => {
   return (
@@ -26,12 +27,12 @@ const LeafletsPage = () => {
         title="Contact"
       />
       <main className="text-center">
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400 uppercase">
+        <h2 className="inline-block p-3 mb-4 text-2xl font-bold headingpattern uppercase">
           Leaflets &amp; Downloads
         </h2>
 
         <p className="mb-5">
-          View leaflets on this page, and click them to download a PDF.
+          Click on a preview image to download a full PDF version.
         </p>
 
         <div className="mx-auto max-w-screen-sm">
@@ -39,17 +40,16 @@ const LeafletsPage = () => {
             <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
               Poster
             </h2>
-            <Document file={Leaflet} className="mx-auto text-center">
-              <Page pageNumber={1} className="mx-auto text-center" />
-            </Document>
+            <hr />
+            <img src={LeafletImg} className="mx-auto" />
           </a>
         </div>
-        <hr />
-        <div className="mx-auto text-center mt-6">
+        <div className="mx-auto max-w-screen-sm mt-6">
           <a href={Brochure} target="_blank" rel="noopener noreferrer" download>
             <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
               Brochure
             </h2>
+            <hr />
             <img src={BrochureImg} className="mx-auto" />
           </a>
         </div>

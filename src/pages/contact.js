@@ -11,10 +11,10 @@ function ContactPage() {
         title="Contact"
       />
       <section className="text-center">
-        <h2 className="inline-block p-3 mb-4 text-2xl mx-auto font-bold bg-yellow-400 uppercase">
+        <h2 className="inline-block p-3 mb-4 text-2xl mx-auto font-bold headingpattern uppercase">
           Contact Us
         </h2>
-        <div className="md:w-2/3 mx-auto text-justify px-4">
+        <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">
           <p className="mb-2">
             We want the people of Sheffield to get involved with our allotments.
             We are always looking for new people who want to take an active role

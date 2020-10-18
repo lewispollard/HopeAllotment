@@ -16,10 +16,10 @@ const HistoryPage = () => {
           className="block w-2/3 mx-auto mb-8 rounded-xl shadow-lg"
           src={ToolsPic}
         />
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400 uppercase">
+        <h2 className="inline-block p-3 mb-4 text-2xl font-bold headingpattern uppercase">
           History
         </h2>
-        <section className="space-y-5 text-justify w-3/4 mx-auto">
+        <section className="space-y-3 font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">
           <p>
             Trade Base was set up in 1998 by a group of local people who were
             keen to regenerate Firth Park, Shiregreen and Brightside. The group

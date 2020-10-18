@@ -17,7 +17,7 @@ const CommitteePage = () => {
           src={PumpkinPic}
         />
 
-        <h1 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
+        <h1 className="inline-block p-3 mb-4 text-2xl font-bold headingpattern">
           WHO WE ARE &amp; WHAT OUR AIMS ARE
         </h1>
         <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">
@@ -57,7 +57,7 @@ const CommitteePage = () => {
           </p>
         </div>
 
-        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold bg-yellow-400 mt-6">
+        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold headingpattern mt-6">
           Session Leaders
         </h1>
 
@@ -73,7 +73,7 @@ const CommitteePage = () => {
           <li>Phil Webster </li>
         </ul>
 
-        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold bg-yellow-400 mt-6">
+        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold headingpattern mt-6">
           Committee members
         </h1>
 

@@ -19,7 +19,7 @@ function IndexPage() {
           src={PlantPic}
         />
 
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400 uppercase">
+        <h2 className="inline-block headingpattern p-3 mb-4 text-2xl font-bold uppercase">
           Welcome to the Hope Community Allotment Project
         </h2>
         <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">

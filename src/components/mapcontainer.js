@@ -7,7 +7,7 @@ const LocationMap = ({ selectedPlace, ...extraProps }) => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyB5Hd3yyXPtfBZOkLG0IkJlmqfO0pUrpG8" }}
         defaultCenter={selectedPlace}
-        defaultZoom={17}
+        defaultZoom={16}
         className="w-2/3 mx-auto"
       >
         <div
