@@ -1,14 +1,15 @@
 # HOPE community allotment project website
 
 <div align="center">
-  <img src="https://image.ibb.co/cJjPN7/gatsby_tailwind.png" alt="Gatsby and Tailwind CSS logos">
-</div>
-
-<div align="center">
   <strong>HOPE allotment new site!</strong><br />
   Uses Gatsby and Tailwind to generate a fast, responsive single-page application.<br />
   <br />
   <br />
+</div>
+
+<div align="center">
+  <img src="https://lewispollard.github.io/HopeAllotment/static/bigleaf-a16f66c0248dd418e05f250a43153a52.png" alt="HOPE allotment website logo"/>
+  <img src="https://image.ibb.co/cJjPN7/gatsby_tailwind.png" alt="Gatsby and Tailwind CSS logos">
 </div>
 
 ## Get started
