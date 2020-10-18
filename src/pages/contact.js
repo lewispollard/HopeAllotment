@@ -74,7 +74,7 @@ function ContactPage() {
           <p className="mb-6">Please leave a contact message below.</p>
         </div>
 
-        <div className=" text-green-700 font-semibold">{success}</div>
+        <div className=" text-green-700 font-semibold text-2xl">{success}</div>
         <div className="text-red-600 font-semibold mb-3">{error}</div>
 
         <form className="mx-auto md:w-1/2" method="post" action={functionURL}>
