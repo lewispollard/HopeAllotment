@@ -53,7 +53,7 @@ npm run deploy
 
 ## License
 
-[MIT](https://github.com/taylorbryant/gatsby-starter-tailwind/blob/master/LICENSE.md)
+[MIT](https://github.com/lewispollard/HopeAllotment/blob/develop/LICENSE.md)
 
 ## How you can help
 
