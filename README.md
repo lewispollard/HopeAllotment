@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <img src="https://lewispollard.github.io/HopeAllotment/static/bigleaf-a16f66c0248dd418e05f250a43153a52.png" alt="HOPE allotment website logo"/>
+  <img src="https://lewispollard.github.io/HopeAllotment/static/bigleaf-a16f66c0248dd418e05f250a43153a52.png" alt="HOPE allotment website logo" style="margin-bottom:36px;"/>
   <img src="https://image.ibb.co/cJjPN7/gatsby_tailwind.png" alt="Gatsby and Tailwind CSS logos">
 </div>
 
