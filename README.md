@@ -22,51 +22,27 @@ cd HopeAllotment/
 
 #### Install dependencies:
 
-```sh
-yarn
-```
-
-OR
-
-```sh
-npm install
-```
+Yarn | NPM
+------------ | -------------
+``` yarn ``` | ``` npm install ```
 
 #### Install the Gatsby CLI:
 
-```sh
-yarn global add gatsby-cli
-```
-
-OR
-
-```sh
-npm i --global gatsby-cli
-```
+Yarn | NPM
+------------ | -------------
+``` yarn global add gatsby-cli ``` | ``` npm i --global gatsby-cli ```
 
 #### Run the development server:
 
-```sh
-yarn start
-```
-
-OR
-
-```sh
-npm run start
-```
+Yarn | NPM
+------------ | -------------
+``` yarn start ``` | ``` npm run start ```
 
 #### Deploy (if you have permissions):
 
-```sh
-yarn deploy
-```
-
-OR
-
-```sh
-npm run deploy
-```
+Yarn | NPM
+------------ | -------------
+``` yarn deploy ``` | ``` npm run deploy ```
 
 ## Resources
 
