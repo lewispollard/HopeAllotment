@@ -8,15 +8,15 @@ const HistoryPage = () => {
     <Layout>
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
-        title="Contact"
+        title="History"
       />
       <main className="text-center ">
         <img
           alt="Garden tools in the grass"
-          className="block w-2/3 mx-auto mb-8 rounded-xl shadow-lg"
+          className="block w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
           src={ToolsPic}
         />
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold headingpattern uppercase">
+        <h2 className="inline-block p-3 mb-6 text-2xl font-bold headingpattern uppercase">
           History
         </h2>
         <section className="space-y-3 font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">

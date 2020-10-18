@@ -8,12 +8,12 @@ const CommitteePage = () => {
     <Layout>
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
-        title="Committee"
+        title="About"
       />
       <main className="text-center">
         <img
           alt="A pumpkin growing"
-          className="block w-2/3 mx-auto mb-8 rounded-xl shadow-lg"
+          className="block w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
           src={PumpkinPic}
         />
 

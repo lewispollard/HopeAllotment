@@ -24,10 +24,10 @@ const LeafletsPage = () => {
 
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
-        title="Contact"
+        title="Leaflets"
       />
       <main className="text-center">
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold headingpattern uppercase">
+        <h2 className="inline-block p-3 mb-6 text-2xl font-bold headingpattern uppercase">
           Leaflets &amp; Downloads
         </h2>
 

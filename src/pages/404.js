@@ -15,7 +15,7 @@ function NotFoundPage() {
           src={abductionIllustration}
         />
         <h2 className="headingpattern text-2xl font-bold inline-block my-8 p-3">
-          Looks like this page is a ghost that got abducted by aliens...
+          Looks like this page was not found...
         </h2>
       </div>
     </Layout>

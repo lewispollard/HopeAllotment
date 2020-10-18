@@ -7,9 +7,9 @@ const fullConfig = resolveConfig(tailwindConfig);
 module.exports = {
   pathPrefix: "/HopeAllotment",
   siteMetadata: {
-    title: `Hope Community Allotment`,
-    description: `Home of the Hope community allotment project, Sheffield, UK.`,
-    author: `Hope Community Allotment`,
+    title: `HOPE Community Allotment`,
+    description: `Home of the HOPE community allotment project, Sheffield, UK.`,
+    author: `HOPE Community Allotment`,
   },
   plugins: [
     `gatsby-plugin-eslint`,
@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Hope Community Allotment`,
-        short_name: `Hope`,
+        name: `HOPE Community Allotment`,
+        short_name: `HOPE`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.teal["400"],

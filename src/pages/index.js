@@ -15,11 +15,11 @@ function IndexPage() {
       <section className="text-center">
         <img
           alt="Planting a small plant by hand"
-          className="block w-2/3 mx-auto mb-8 rounded-xl shadow-lg"
+          className="block w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
           src={PlantPic}
         />
 
-        <h2 className="inline-block headingpattern p-3 mb-4 text-2xl font-bold uppercase">
+        <h2 className="inline-block headingpattern p-3 mb-6 text-2xl font-bold uppercase">
           Welcome to the Hope Community Allotment Project
         </h2>
         <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">
