@@ -15,7 +15,9 @@ function Layout({ children, location }) {
 
       <footer className="footerpattern">
         <nav className="flex justify-between text-center max-w-4xl p-1 mx-auto text-xs tracking-tight leading-tight md:leading-normal md:text-sm md:tracking-normal md:p-3 text-green-200 bg-blue-700 rounded-lg my-1 md:my-2 bg-opacity-85">
-          <p className="text-white flex-1">Created by volunteers</p>
+          <p className="text-white flex-1 sm:leading-loose ">
+            Created by volunteers
+          </p>
           <p className="flex-1 text-center">
             <a
               href="https://www.sagesheffield.org.uk/"
