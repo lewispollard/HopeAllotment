@@ -73,7 +73,7 @@ function Layout({ children, location }) {
               <span className="md:leading-relaxed">Green City Action</span>
             </a>
           </p>
-          <p className="md:text-lg flex-1 text-center">
+          <p className="text-lg flex-1 leading-relaxed text-center">
             <span role="img" aria-label="Green Heart">
               💚
             </span>
