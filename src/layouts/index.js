@@ -14,14 +14,14 @@ function Layout({ children, location }) {
       </main>
 
       <footer className="footerpattern">
-        <nav className="flex justify-between max-w-4xl p-2 mx-auto text-xs tracking-tight leading-tight md:leading-normal md:text-sm md:tracking-normal md:p-3 text-green-200 bg-blue-700 rounded-lg my-2 bg-opacity-85">
-          <p className="text-white">Created by volunteers</p>
-          <p>
+        <nav className="flex justify-between text-center max-w-4xl p-1 mx-auto text-xs tracking-tight leading-tight md:leading-normal md:text-sm md:tracking-normal md:p-3 text-green-200 bg-blue-700 rounded-lg my-1 md:my-2 bg-opacity-85">
+          <p className="text-white flex-1">Created by volunteers</p>
+          <p className="flex-1 text-center">
             <a
               href="https://www.sagesheffield.org.uk/"
               rel="noreferrer"
               target="_blank"
-              className="flex"
+              className="flex justify-center"
             >
               <svg
                 className="h-5 w-5"
@@ -32,15 +32,15 @@ function Layout({ children, location }) {
                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
               </svg>
-              Support Arts Gardening Education
+              <span className="leading-loose md:leading-relaxed">SAGE</span>
             </a>
           </p>
-          <p>
+          <p className="flex-1 text-center">
             <a
               href="https://growsheffield.com/sites/leaf-allotment/"
               rel="noreferrer"
               target="_blank"
-              className="flex"
+              className="flex  justify-center"
             >
               <svg
                 className="h-5 w-5"
@@ -51,15 +51,15 @@ function Layout({ children, location }) {
                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
               </svg>
-              LEAF Allotment
+              <span className="leading-loose md:leading-relaxed">LEAF</span>
             </a>
           </p>
-          <p>
+          <p className="flex-1 text-center">
             <a
               href="https://www.facebook.com/GreenCityAction/"
               rel="noreferrer"
               target="_blank"
-              className="flex"
+              className="flex  justify-center"
             >
               <svg
                 className="h-5 w-5"
@@ -70,10 +70,10 @@ function Layout({ children, location }) {
                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
               </svg>
-              Green City Action
+              <span className="md:leading-relaxed">Green City Action</span>
             </a>
           </p>
-          <p className="text-lg">
+          <p className="md:text-lg flex-1 text-center">
             <span role="img" aria-label="Green Heart">
               💚
             </span>
