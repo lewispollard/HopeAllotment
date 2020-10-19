@@ -1,9 +1,9 @@
 import React from "react";
-
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import SEO from "../components/seo";
-import PlantPic from "../images/plant.jpg";
 
-function IndexPage() {
+function IndexPage({ data }) {
   return (
     <div>
       <SEO
@@ -12,10 +12,11 @@ function IndexPage() {
       />
 
       <section className="text-center">
-        <img
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          className="block w-5/6 md:w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
           alt="Planting a small plant by hand"
-          className="block w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
-          src={PlantPic}
+          objectFit="scale-down"
         />
 
         <h2 className="inline-block headingpattern p-3 mb-6 text-2xl font-bold uppercase">
@@ -60,3 +61,15 @@ function IndexPage() {
 }
 
 export default IndexPage;
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "plant.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 576) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

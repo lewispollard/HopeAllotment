@@ -1,21 +1,23 @@
 import React from "react";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import { SEO } from "../components";
 
-import ToolsPic from "../images/dylan-nolte-dUsmF-F-bJg-unsplash.jpg";
-
-const HistoryPage = () => {
+const HistoryPage = ({ data }) => {
   return (
     <div>
       <SEO
         keywords={[`hope`, `community`, `allotment`, `volunteers`]}
         title="History"
       />
-      <main className="text-center ">
-        <img
+      <main className="text-center">
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          className="block w-5/6 md:w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
           alt="Garden tools in the grass"
-          className="block w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
-          src={ToolsPic}
+          objectFit="scale-down"
         />
+
         <h2 className="inline-block p-3 mb-6 text-2xl font-bold headingpattern uppercase">
           History
         </h2>
@@ -100,3 +102,15 @@ const HistoryPage = () => {
 };
 
 export default HistoryPage;
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "dylan-nolte-dUsmF-F-bJg-unsplash.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 576) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

@@ -1,9 +1,9 @@
 import React from "react";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import { SEO } from "../components";
 
-import PumpkinPic from "../images/steffi-pereira-Pv_Mut-lvWg-unsplash.jpg";
-
-const CommitteePage = () => {
+const CommitteePage = ({ data }) => {
   return (
     <div>
       <SEO
@@ -11,10 +11,11 @@ const CommitteePage = () => {
         title="About"
       />
       <main className="text-center">
-        <img
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          className="block w-5/6 md:w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
           alt="A pumpkin growing"
-          className="block w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
-          src={PumpkinPic}
+          objectFit="scale-down"
         />
 
         <h1 className="inline-block p-3 mb-4 text-2xl font-bold headingpattern">
@@ -107,3 +108,15 @@ const CommitteePage = () => {
 };
 
 export default CommitteePage;
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "steffi-pereira-Pv_Mut-lvWg-unsplash.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 576) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

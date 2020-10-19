@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 const resolveConfig = require("tailwindcss/resolveConfig");
 const tailwindConfig = require("./tailwind.config.js");
+const path = require("path");
 
 const fullConfig = resolveConfig(tailwindConfig);
 
@@ -14,7 +15,16 @@ module.exports = {
   plugins: [
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-layout",
+    `gatsby-plugin-layout`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
