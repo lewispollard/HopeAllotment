@@ -1002,9 +1002,9 @@
     to-fast-properties "^2.0.0"
 
 "@ccalamos/gatsby-source-googlemaps-static@^1.4.8":
-  version "1.4.8"
-  resolved "https://registry.yarnpkg.com/@ccalamos/gatsby-source-googlemaps-static/-/gatsby-source-googlemaps-static-1.4.8.tgz#10fb3435fc3e85a0008815f0c363081bc7f99cf6"
-  integrity sha512-KAUZIj7Oqi8f83lVaBgXc8ZFG5tUEOdzpEMv0AKjrAqfEmJ0SyS7F7/HvBL+6HbVdyhKLNapww/y50pfP8PQJA==
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/@ccalamos/gatsby-source-googlemaps-static/-/gatsby-source-googlemaps-static-1.4.9.tgz#7d8918d38ed164b7d1829b18dc80d2fd8bfcc8aa"
+  integrity sha512-fUwLpyESijFTUXbpNQ22RcTy3Pc20t22+rayShiuYTXBQMftYIxkdlwjPDoReA6DBfo0LLJz29K6tHrHT3Qniw==
   dependencies:
     axios "^0.20.0"
     fs-extra "^9.0.1"
