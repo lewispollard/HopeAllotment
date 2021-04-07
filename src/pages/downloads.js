@@ -1,12 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { SEO } from "../components";
 
-import Leaflet from "../../public/downloads/Leaflet_A4_2015.pdf";
-import Brochure from "../../public/downloads/Brochure - user.pdf";
-import BrochureImg from "../images/brochure_front.png";
-import LeafletImg from "../images/leaflet-front.png";
+import Leaflet from "../../content/downloads/Leaflet_A4_2015.pdf";
+import Brochure from "../../content/downloads/Brochure - user.pdf";
 
 const LeafletsPage = ({ data }) => {
   return (
@@ -41,12 +39,11 @@ const LeafletsPage = ({ data }) => {
             <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
               Poster
             </h2>
-            <Img
-              fluid={data.leaflet.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.leaflet.childImageSharp.gatsbyImageData}
               className="mx-auto shadow-lg"
               alt="Leaflet front cover"
-              objectFit="scale-down"
-            />
+              objectFit="scale-down" />
           </a>
         </div>
         <hr className="mt-6" />
@@ -55,12 +52,11 @@ const LeafletsPage = ({ data }) => {
             <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
               Brochure
             </h2>
-            <Img
-              fluid={data.brochure.childImageSharp.fluid}
+            <GatsbyImage
+              image={data.brochure.childImageSharp.gatsbyImageData}
               className="mx-auto shadow-lg"
               alt="Brochure front cover"
-              objectFit="scale-down"
-            />
+              objectFit="scale-down" />
           </a>
         </div>
       </main>
@@ -70,21 +66,16 @@ const LeafletsPage = ({ data }) => {
 
 export default LeafletsPage;
 
-export const query = graphql`
-  query {
-    leaflet: file(relativePath: { eq: "leaflet-front.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 640) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    brochure: file(relativePath: { eq: "brochure_front.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 640) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  leaflet: file(relativePath: {eq: "leaflet-front.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 640, layout: CONSTRAINED)
     }
   }
+  brochure: file(relativePath: {eq: "brochure_front.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 640, layout: CONSTRAINED)
+    }
+  }
+}
 `;

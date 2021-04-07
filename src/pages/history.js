@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { SEO } from "../components";
 
 const HistoryPage = ({ data }) => {
@@ -11,12 +11,11 @@ const HistoryPage = ({ data }) => {
         title="History"
       />
       <main className="text-center">
-        <Img
-          fluid={data.file.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.file.childImageSharp.gatsbyImageData}
           className="block w-5/6 md:w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
           alt="Garden tools in the grass"
-          objectFit="scale-down"
-        />
+          objectFit="scale-down" />
 
         <h2 className="inline-block p-3 mb-6 text-2xl font-bold headingpattern uppercase">
           History
@@ -103,14 +102,11 @@ const HistoryPage = ({ data }) => {
 
 export default HistoryPage;
 
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "dylan-nolte-dUsmF-F-bJg-unsplash.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 576) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  file(relativePath: {eq: "dylan-nolte-dUsmF-F-bJg-unsplash.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 576, layout: CONSTRAINED)
     }
   }
+}
 `;

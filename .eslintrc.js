@@ -20,6 +20,6 @@ module.exports = {
   plugins: ["react"],
   rules: {
     "no-unused-vars": "off",
-    "react/prop-types": 0,
+    "react/prop-types": 0,    // suppress errors for missing 'import React' i
   },
 };
