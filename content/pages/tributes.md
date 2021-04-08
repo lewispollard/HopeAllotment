@@ -5,6 +5,8 @@ title: "Tributes"
 featured_image: "./images/plant.jpg"
 ---
 
+![Plant](./images/plant.jpg)
+
 ## Andrea Hardy – HOPE’s Founder
 Andrea Hardy was the inspiration behind HOPE Community Allotment Project. She died peacefully, aged 57, in July 2013 after a short but brave battle with illness.  She will be remembered with love and affection by many people in Sheffield.
 
