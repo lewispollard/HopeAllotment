@@ -2,6 +2,7 @@
 slug: "/what_we_do"
 date: "2021-04-07"
 title: "What We Do"
+featured_image: "./images/plant.jpg"
 ---
 
 We grow organic vegetables and fruit on four allotment plots. We have two polytunnels and two greenhouses where we grow tomatoes, chillies, peppers, cucumbers and other vegetables that benefit from being grown under cover. Outside we grow a wide range of vegetables including potatoes, onions, various types of squash and courgettes, cabbages, broccoli and peas and beans.  We also have some fruit trees and different types of soft fruit such as strawberries, raspberries, blackcurrants and gooseberries.

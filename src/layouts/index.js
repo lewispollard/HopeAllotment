@@ -14,7 +14,7 @@ function Layout({ children, location }) {
         <Transition location={location}>{children}</Transition>
       </main>
 
-      <footer className="footerpattern">
+      <footer className="footer-pattern">
         <nav className="flex justify-between items-center text-center max-w-4xl p-1 mx-auto text-xs tracking-tight leading-tight md:leading-normal md:text-sm md:tracking-normal md:p-3 text-green-200 bg-blue-700 rounded-lg my-1 md:my-2 bg-opacity-85">
           <p className="text-white flex-1 text-xs sm:leading-loose">
             Created by volunteers

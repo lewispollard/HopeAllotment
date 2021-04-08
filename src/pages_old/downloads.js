@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { SEO } from "../components";
 
@@ -26,7 +25,7 @@ const LeafletsPage = ({ data }) => {
         title="Leaflets"
       />
       <main className="text-center">
-        <h2 className="inline-block p-3 mb-6 text-2xl font-bold headingpattern uppercase">
+        <h2 className="inline-block p-3 mb-6 text-2xl font-bold heading-pattern uppercase">
           Leaflets &amp; Downloads
         </h2>
 
@@ -65,17 +64,3 @@ const LeafletsPage = ({ data }) => {
 };
 
 export default LeafletsPage;
-
-export const query = graphql`{
-  leaflet: file(relativePath: {eq: "leaflet-front.png"}) {
-    childImageSharp {
-      gatsbyImageData(width: 640, layout: CONSTRAINED)
-    }
-  }
-  brochure: file(relativePath: {eq: "brochure_front.png"}) {
-    childImageSharp {
-      gatsbyImageData(width: 640, layout: CONSTRAINED)
-    }
-  }
-}
-`;

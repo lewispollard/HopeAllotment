@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { SEO } from "../components";
 
@@ -17,7 +16,7 @@ const CommitteePage = ({ data }) => {
           alt="A pumpkin growing"
           objectFit="scale-down" />
 
-        <h1 className="headingpattern">
+        <h1 className="heading-pattern">
           WHO WE ARE &amp; WHAT OUR AIMS ARE
         </h1>
         <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">
@@ -57,7 +56,7 @@ const CommitteePage = ({ data }) => {
           </p>
         </div>
 
-        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold headingpattern mt-6">
+        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold heading-pattern mt-6">
           Session Leaders
         </h1>
 
@@ -73,7 +72,7 @@ const CommitteePage = ({ data }) => {
           <li>Phil Webster </li>
         </ul>
 
-        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold headingpattern mt-6">
+        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold heading-pattern mt-6">
           Committee members
         </h1>
 
@@ -107,12 +106,3 @@ const CommitteePage = ({ data }) => {
 };
 
 export default CommitteePage;
-
-export const query = graphql`{
-  file(relativePath: {eq: "steffi-pereira-Pv_Mut-lvWg-unsplash.jpg"}) {
-    childImageSharp {
-      gatsbyImageData(width: 576, layout: CONSTRAINED)
-    }
-  }
-}
-`;

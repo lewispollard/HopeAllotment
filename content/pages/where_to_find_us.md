@@ -2,6 +2,7 @@
 slug: "/where_to_find_us"
 date: "2021-04-07"
 title: "Where To Find Us"
+featured_image: "./images/plant.jpg"
 ---
 
 We rent four plots on the **High Wincobank Allotment Site**. The site entrance is **through a green gate opposite 343 Windmill Lane, 

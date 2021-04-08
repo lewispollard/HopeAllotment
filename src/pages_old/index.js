@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import SEO from "../components/seo";
 
@@ -18,7 +17,7 @@ function IndexPage({ data }) {
           alt="Planting a small plant by hand"
           objectFit="scale-down" />
 
-        <h2 className="inline-block headingpattern p-3 mb-6 text-2xl font-bold uppercase">
+        <h2 className="inline-block heading-pattern p-3 mb-6 text-2xl font-bold uppercase">
           Welcome to Hope Community Allotment Project
         </h2>
         <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">
@@ -60,12 +59,3 @@ function IndexPage({ data }) {
 }
 
 export default IndexPage;
-
-export const query = graphql`{
-  file(relativePath: {eq: "plant.jpg"}) {
-    childImageSharp {
-      gatsbyImageData(width: 576, layout: CONSTRAINED)
-    }
-  }
-}
-`;

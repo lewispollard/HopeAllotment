@@ -9,7 +9,7 @@ const LocationPage = () => {
         title="Location"
       />
       <main className="text-center">
-        <h2 className="inline-block p-3 mb-6 text-2xl font-bold headingpattern uppercase">
+        <h2 className="inline-block p-3 mb-6 text-2xl font-bold heading-pattern uppercase">
           Location
         </h2>
         <section className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4 space-y-3">

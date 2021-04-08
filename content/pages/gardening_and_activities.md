@@ -2,6 +2,7 @@
 slug: "/gardening_sessions_and_activities"
 date: "2021-04-07"
 title: "Gardening Sessions And Other Activities"
+featured_image: "./images/plant.jpg"
 ---
 
 We run three gardening sessions each week, each lasting three hours, on Monday, Thursday and Saturday mornings. The Monday and Thursday sessions start at 9.30am while the Saturday session starts at 10.00am. Refreshments are provided including homemade soup and bread at the end of each session.

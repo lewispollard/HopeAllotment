@@ -15,11 +15,25 @@ module.exports = {
   plugins: [
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/content/pages`,
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+         "markdown-pages": require.resolve("./src/layouts/pageLayout.js"),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 720,
+              linkImagesToOriginal: false,
+
+            },
+          },
+        ],
       },
     },
     {
@@ -29,13 +43,23 @@ module.exports = {
         path: `${__dirname}/content/pages`,
       }
     },
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        extensions: [`.mdx`, `.md`],
+        name: `markdown-pages`,
+        path: `${__dirname}/content/pages`,
       },
     },
-   `gatsby-plugin-layout`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `content`, `pages`, `images`),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -43,9 +67,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+   `gatsby-plugin-layout`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

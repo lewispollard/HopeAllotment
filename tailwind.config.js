@@ -32,6 +32,6 @@ module.exports = {
   },
   variants: {},
   // https://github.com/tailwindcss/custom-forms
-  plugins: [require("@tailwindcss/custom-forms"), require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/custom-forms"), require("@tailwindcss/typography"), require('tailwindcss-textshadow')],
 };
 

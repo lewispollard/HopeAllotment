@@ -2,6 +2,7 @@
 slug: "/about_us"
 date: "2021-04-07"
 title: "About Us"
+featured_image: "./images/plant.jpg"
 ---
 
 > HOPE Community Allotment is run by a Management Committee elected at the Annual General Meeting of Trade Base Trust.
