@@ -1,6 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import SEO from "../components/seo";
 
 function IndexPage({ data }) {
@@ -12,15 +11,14 @@ function IndexPage({ data }) {
       />
 
       <section className="text-center">
-        <Img
-          fluid={data.file.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.file.childImageSharp.gatsbyImageData}
           className="block w-5/6 md:w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
           alt="Planting a small plant by hand"
-          objectFit="scale-down"
-        />
+          objectFit="scale-down" />
 
-        <h2 className="inline-block headingpattern p-3 mb-6 text-2xl font-bold uppercase">
-          Welcome to the Hope Community Allotment Project
+        <h2 className="inline-block heading-pattern p-3 mb-6 text-2xl font-bold uppercase">
+          Welcome to Hope Community Allotment Project
         </h2>
         <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">
           <p className="mb-3">
@@ -61,15 +59,3 @@ function IndexPage({ data }) {
 }
 
 export default IndexPage;
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "plant.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 576) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;

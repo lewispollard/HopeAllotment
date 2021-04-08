@@ -1,6 +1,61 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
 import BigLeaf from "../images/bigleaf.png";
+import {motion} from "framer-motion";
+
+const logoVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0,
+  },
+  animate: {
+    opacity:0.91,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 30,
+      mass: 1
+    }
+  },
+  whileHover: {
+    scale: 1.1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 30,
+      mass: 1
+    }
+  }
+}
+
+const leafVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0,
+  },
+  animate: {
+    opacity:0.95,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 250,
+      damping: 20,
+      mass: 2
+    }
+  },
+  whileHover: {
+    scale: 1.13,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 20,
+      mass: 3
+    }
+  }
+}
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -15,15 +70,16 @@ function Header() {
   `);
 
   return (
-    <header className="headerpattern">
-      <div className=" bg-teal-700 bg-opacity-90 rounded-xl shadow-md flex flex-wrap items-center justify-between max-w-6xl p-1 mx-auto my-2 md:p-2">
+    <header className="header_pattern">
+      <div className="bg-teal-700 bg-opacity-90 rounded-xl shadow-md flex flex-wrap items-center justify-center max-w-6xl p-1 mx-auto my-2
+                  md:p-2 text-shadow-lg hover:text-shadow-xl">
         <Link to="/">
-          <h1 className="flex items-center text-white no-underline">
-            <img src={BigLeaf} alt="" className="mr-2 h-16" />
-            <span className="text-xl font-bold tracking-tight">
+          <motion.h1 variants={logoVariants} initial={"initial"} animate={"animate"} whileHover={logoVariants?.whileHover}  className="flex items-center text-white no-underline mb-2">
+            <motion.img variants={leafVariants} whileHover={leafVariants.whileHover} src={BigLeaf} alt="" className="mr-2 h-16" />
+            <motion.span className="text-xl font-bold tracking-tight">
               {site.siteMetadata.title}
-            </span>
-          </h1>
+            </motion.span>
+          </motion.h1>
         </Link>
 
         <button
@@ -51,23 +107,31 @@ function Header() {
               title: `Home`,
             },
             {
-              route: `/about`,
+              route: `/about_us`,
               title: `About Us`,
             },
             {
-              route: `/history`,
+              route: `/our_history`,
               title: `History`,
             },
             {
-              route: `/location`,
-              title: `Location`,
+              route: `/what_we_do`,
+              title: "What We Do"
             },
             {
-              route: `/downloads`,
-              title: `Leaflets`,
+              route: `/gardening_sessions_and_activities`,
+              title: `Gardening & Activities`,
             },
             {
-              route: `/contact`,
+              route: `/where_to_find_us`,
+              title: `Where To Find Us`,
+            },
+            {
+              route: `/tributes`,
+              title: `Tributes`,
+            },
+            {
+              route: `/contact_us`,
               title: `Contact`,
             },
           ].map((link) => (

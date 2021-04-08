@@ -1,7 +1,7 @@
 import React from "react";
 
 import SEO from "../components/seo";
-import abductionIllustration from "../images/abduction-illustration.svg";
+import abductionIllustration from "../../content/pages/images/abduction-illustration.svg";
 
 function NotFoundPage() {
   return (
@@ -13,7 +13,7 @@ function NotFoundPage() {
           className="block mx-auto w-1/2"
           src={abductionIllustration}
         />
-        <h2 className="headingpattern text-2xl font-bold mx-auto inline-block my-8 p-3">
+        <h2 className="heading-pattern text-2xl font-bold mx-auto inline-block my-8 p-3">
           Looks like this page was not found...
         </h2>
       </div>

@@ -1,6 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { SEO } from "../components";
 
 const CommitteePage = ({ data }) => {
@@ -11,14 +10,13 @@ const CommitteePage = ({ data }) => {
         title="About"
       />
       <main className="text-center">
-        <Img
-          fluid={data.file.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.file.childImageSharp.gatsbyImageData}
           className="block w-5/6 md:w-2/3 mx-auto mb-6 rounded-xl shadow-lg"
           alt="A pumpkin growing"
-          objectFit="scale-down"
-        />
+          objectFit="scale-down" />
 
-        <h1 className="inline-block p-3 mb-4 text-2xl font-bold headingpattern">
+        <h1 className="heading-pattern">
           WHO WE ARE &amp; WHAT OUR AIMS ARE
         </h1>
         <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">
@@ -58,7 +56,7 @@ const CommitteePage = ({ data }) => {
           </p>
         </div>
 
-        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold headingpattern mt-6">
+        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold heading-pattern mt-6">
           Session Leaders
         </h1>
 
@@ -74,7 +72,7 @@ const CommitteePage = ({ data }) => {
           <li>Phil Webster </li>
         </ul>
 
-        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold headingpattern mt-6">
+        <h1 className="inline-block uppercase p-3 mb-4 text-2xl font-bold heading-pattern mt-6">
           Committee members
         </h1>
 
@@ -108,15 +106,3 @@ const CommitteePage = ({ data }) => {
 };
 
 export default CommitteePage;
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "steffi-pereira-Pv_Mut-lvWg-unsplash.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 576) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
