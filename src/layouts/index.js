@@ -76,9 +76,10 @@ function Layout({ children, location }) {
               <span className="md:leading-relaxed  text-xs">Grow <br/> Sheffield</span>
             </a>
           </p>
-          <p className="text-lg flex-1 leading-relaxed text-center">
+          <p className="text-lg flex-1 leading-relaxed text-center font-green-500">
             <span role="img" aria-label="Green Heart">
-              <motion.svg height={32} width={32} >
+              <motion.svg initial={{scale: 0.8, opacity: 0, pathLength: 0}} animate={{scale: 1, opacity: 1, pathLength: 1}}
+                          transition={{type: "spring", duration: 4, bounce: 3}} className={"stroke fill-current\t"} height={32} width={32} >
 <path id="heart-icon" d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454
   C30,20.335,16,28.261,16,28.261z"/>
     </motion.svg>
