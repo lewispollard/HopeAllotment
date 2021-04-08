@@ -48,10 +48,11 @@ const leafVariants = {
   whileHover: {
     scale: 1.1,
     opacity: 1,
+    rotate: -20,
     transition: {
       type: "spring",
       stiffness: 200,
-      damping: 20,
+      damping: 30,
       mass: 3
     }
   }
@@ -66,21 +67,19 @@ const menuItemVariants = {
     opacity:0.95,
     scale: 1,
     transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 20,
-      mass: 1,
+      type: "tween",
+      ease: "linear",
+      duration: 0.4,
       delay: 0.052 * i,
     }
   }),
   whileHover: {
-    scale: 1.1,
+    scale: 1,
     opacity: 1,
     transition: {
-      type: "spring",
-      stiffness: 200,
-      damping: 20,
-      mass: 3
+      type: "tween",
+      ease: "linear",
+      duration: 0.2
     }
   }
 }
@@ -88,24 +87,25 @@ const menuItemVariants = {
 const underlineVariants = {
   initial: {
     scaleX: 0,
+    scaleY: 0,
   },
   animate: (i) => ({
-    scaleX: 0.67,
+    scaleX: 0.6,
+    scaleY: 1,
     transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 20,
-      mass: 1,
+      type: "tween",
+      ease: "circOut",
+      duration: 0.3,
       delay: 0.052 * i,
     }
   }),
   whileHover: {
     scaleX: 1,
+    scaleY: 1.1,
     transition: {
-      type: "spring",
-      stiffness: 200,
-      damping: 20,
-      mass: 3
+      type: "tween",
+      ease: "circOut",
+      duration: 0.3
     }
   }
 }
@@ -191,8 +191,10 @@ function Header() {
               <motion.div custom={index} className="block text-shadow-xl font-semibold mt-4 text-white md:inline-block w-20 md:w-auto mx-auto md:mt-0 md:ml-6"
                           key={link.title} variants={menuItemVariants} animate={"animate"} initial={"initial"} whileHover={"whileHover"}>
                 <Link to={link.route}>
-                  <span>{link.title}</span>
-                  <motion.hr variants={underlineVariants} />
+                  <motion.div>
+                    <span>{link.title}</span>
+                    <motion.hr variants={underlineVariants} />
+                  </motion.div>
                 </Link>
               </motion.div>
           ))}
