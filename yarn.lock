@@ -1044,13 +1044,6 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@ccalamos/gatsby-source-googlemaps-static@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@ccalamos/gatsby-source-googlemaps-static/-/gatsby-source-googlemaps-static-3.0.1.tgz#ae16a761175a99d68972e2c7b9ebb02c4611250f"
-  integrity sha512-hZJHAyfeDn8EFU3hNJytYFA3dO6GjUvB3KfOrtstrQY9JC8rJ3X85xLGiZCLPnl+iTA8aT3rUM6q9OSi8qfx+w==
-  dependencies:
-    gatsby-source-filesystem "^3.0.0"
-
 "@emotion/is-prop-valid@^0.8.2":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
@@ -1121,13 +1114,6 @@
     html-entities "^2.1.0"
     querystring "^0.2.0"
     strip-ansi "^6.0.0"
-
-"@googlemaps/js-api-loader@^1.7.0":
-  version "1.11.3"
-  resolved "https://registry.yarnpkg.com/@googlemaps/js-api-loader/-/js-api-loader-1.11.3.tgz#de2db86c5c64ed62f2f16dc59eb59821257dc583"
-  integrity sha512-MUX04/b5dBIqi2jl2/89FS48gWPm5cgUwO4dDffIoylKv/e7HP9gJvpKqk1/JMIYPX2y/qO2TqFteRAWmNU1BA==
-  dependencies:
-    fast-deep-equal "^3.1.3"
 
 "@graphql-tools/batch-execute@^7.1.0":
   version "7.1.0"
@@ -1609,11 +1595,6 @@
   dependencies:
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
-
-"@mapbox/point-geometry@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/point-geometry/-/point-geometry-0.1.0.tgz#8a83f9335c7860effa2eeeca254332aa0aeed8f2"
-  integrity sha1-ioP5M1x4YO/6Lu7KJUMyqgru2PI=
 
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
@@ -5714,7 +5695,7 @@ fast-copy@^2.1.0:
   resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-2.1.1.tgz#f5cbcf2df64215e59b8e43f0b2caabc19848083a"
   integrity sha512-Qod3DdRgFZ8GUIM6ygeoZYpQ0QLW9cf/FS9KhhjlYggcSZXWAemAw8BOCO5LuYCrR3Uj3qXDVTUzOUwG8C7beQ==
 
-fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
+fast-deep-equal@^3.1.1:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
@@ -6540,7 +6521,7 @@ gatsby-remark-images@^4.2.0:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-source-filesystem@^3.0.0, gatsby-source-filesystem@^3.2.0:
+gatsby-source-filesystem@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.2.0.tgz#1ceec22a068b235a084b15fb426898ef213fe995"
   integrity sha512-5CAMdSiasWCciJEneIU1RgS9IcHrTwl8i7xqPxhE9ihBa+Y1RSEX3FdtNGnK3Z5dYQVHMwR0NNOPJ3WZW0rJQQ==
@@ -7061,16 +7042,6 @@ globby@^6.1.0:
     object-assign "^4.0.1"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
-
-google-map-react@^2.1.8:
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/google-map-react/-/google-map-react-2.1.9.tgz#6e539ce8bf28e7b8cda6058402e7581d1d1cec3d"
-  integrity sha512-//Pa0o6sdspU2H0ehVztSDQSnYYeV6TY4Z6ftty34yiCJYLliOzeq17dA9uFkyUFdL+XwbTU6e9mfs+bjBMIzw==
-  dependencies:
-    "@googlemaps/js-api-loader" "^1.7.0"
-    "@mapbox/point-geometry" "^0.1.0"
-    eventemitter3 "^4.0.4"
-    prop-types "^15.7.2"
 
 got@8.3.2, got@^8.3.1:
   version "8.3.2"
