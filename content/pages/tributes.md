@@ -2,7 +2,6 @@
 slug: "/tributes"
 date: "2021-04-07"
 title: "Tributes"
-featured_image: "./images/plant.jpg"
 ---
 
 ## Andrea Hardy – HOPE’s Founder

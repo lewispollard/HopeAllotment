@@ -2,7 +2,6 @@
 slug: "/what_we_do"
 date: "2021-04-07"
 title: "What We Do"
-featured_image: "./images/plant.jpg"
 ---
 
 

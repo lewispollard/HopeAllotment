@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
 import BigLeaf from "../images/bigleaf.png";
-import {motion} from "framer-motion";
+import {motion, AnimatePresence} from "framer-motion";
 
 const logoVariants = {
   initial: {
@@ -90,7 +90,7 @@ const underlineVariants = {
     scaleY: 0,
   },
   animate: (i) => ({
-    scaleX: 0.6,
+    scaleX: 0.76,
     scaleY: 1,
     transition: {
       type: "tween",
@@ -110,6 +110,21 @@ const underlineVariants = {
   }
 }
 
+const menuVariants = {
+  initial: {
+    y: -500,
+    opacity: 0
+  },
+  animate: {
+    y: 0,
+    opacity: 1
+  },
+  exit: {
+    y: -500,
+    opacity: 0
+  }
+}
+
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
   const { site } = useStaticQuery(graphql`
@@ -124,6 +139,7 @@ function Header() {
 
   return (
     <header className="header_pattern">
+      <AnimatePresence>
       <div className="rounded-xl flex flex-wrap items-center justify-center max-w-6xl p-1 mx-auto my-2
                   md:p-2 text-shadow-lg hover:text-shadow-xl">
         <Link to="/">
@@ -149,10 +165,10 @@ function Header() {
           </svg>
         </button>
 
-        <nav
+        <motion.nav layout variants={menuVariants}  animate={"animate"} initial={"initial"} exit={"exit"}
           className={`${
             isExpanded ? `block` : `hidden`
-          } text-center md:block text-shadow-sm  w-full md:w-auto mt-3 lg:mt-1`}
+          } text-center md:block text-shadow-sm  w-full md:w-auto mt-0 lg:mt-1`}
         >
           {[
             {
@@ -188,7 +204,7 @@ function Header() {
               title: `Contact`,
             },
           ].map((link, index) => (
-              <motion.div custom={index} className="block text-shadow-xl font-semibold mt-4 text-white md:inline-block w-20 md:w-auto mx-auto md:mt-0 md:ml-6"
+              <motion.div custom={index} className="block text-shadow-xl font-semibold mt-4 text-white md:inline-block w-36 md:w-auto mx-auto md:mt-0 md:ml-6"
                           key={link.title} variants={menuItemVariants} animate={"animate"} initial={"initial"} whileHover={"whileHover"}>
                 <Link to={link.route}>
                   <motion.div>
@@ -218,8 +234,9 @@ function Header() {
               <path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z" />
             </svg>
           </motion.a>
-        </nav>
+        </motion.nav>
       </div>
+      </AnimatePresence>
     </header>
   );
 }
