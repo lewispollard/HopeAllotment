@@ -4,32 +4,14 @@ import GoogleMapReact from "google-map-react";
 const LocationMap = ({ selectedPlace, ...extraProps }) => {
   return (
     <div style={{ width: "100%", height: "50vh" }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyB5Hd3yyXPtfBZOkLG0IkJlmqfO0pUrpG8" }}
-        defaultCenter={selectedPlace}
-        defaultZoom={16}
-        className="w-2/3 mx-auto"
-      >
-        <div
-          className="text-purple-600 transform -translate-y-3"
-          text="Allotment"
-          lat={selectedPlace.lat}
-          lng={selectedPlace.lng}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            className="w-10 h-10"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-              clipRule="evenodd"
-            />
-          </svg>
+        <div className="mapouter">
+            <div className="gmap_canvas">
+                <iframe width="710" height="580" id="gmap_canvas" style={ {overflow:"hidden", background:"none, !important", height:"580px", width:"710px"}}
+                        src="https://maps.google.com/maps?q=53.41561155973524,%20-1.442938707955667&t=k&z=19&ie=UTF8&iwloc=&output=embed"
+                        className={"rounded-lg shadow border-4 border-indigo-900 shadow-lg overflow-hidden"}
+                        frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
+                </div>
         </div>
-      </GoogleMapReact>
     </div>
   );
 };
