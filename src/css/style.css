@@ -51,7 +51,7 @@
   }
 
   .md-page .gatsby-resp-image-image {
-    @apply rounded-xl shadow  border-4 border-opacity-80 border-solid  border-indigo-600 overflow-hidden;
+    @apply rounded-xl shadow-sm  border-4 border-opacity-80 border-solid  border-indigo-800 overflow-hidden;
   }
 
   .md-page p {
