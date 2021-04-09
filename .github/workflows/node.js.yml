@@ -40,3 +40,5 @@ jobs:
       with:
         # Destination S3 Bucket
         dest-s3-bucket: hope-allotment
+        cloudfront-id-to-invalidate: E2KA72M1OS6WMX
+        
