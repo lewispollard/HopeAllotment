@@ -89,8 +89,8 @@ function Header() {
                   <motion.div onClick={() => {
                     setTimeout(() => {
                       console.log(document?.getElementById("md-page"));
-                      document?.getElementById("md-page")?.scrollIntoView({ behavior: "smooth", inline: "end", block: "start" });
-                    }, 100);
+                      document?.getElementById("main")?.scrollIntoView({ behavior: "smooth", inline: "end", block: "start" });
+                    }, 200);
 
                   }}>
                     <span>{link.title}</span>
