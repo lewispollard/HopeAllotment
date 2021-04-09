@@ -10,7 +10,7 @@ module.exports = {
           css: {
             h1: {
               marginBottom: '1',
-              fontSize: '1.4em'
+              fontSize: '1.6em',
             },
             h4: {
               marginTop: '1',
@@ -30,6 +30,7 @@ module.exports = {
       },
     },
   },
+  important: true,
   variants: {},
   plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography"), require('tailwindcss-textshadow')],
 };

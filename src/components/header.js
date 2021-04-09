@@ -2,128 +2,7 @@ import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
 import BigLeaf from "../images/bigleaf.png";
 import {motion, AnimatePresence} from "framer-motion";
-
-const logoVariants = {
-  initial: {
-    opacity: 0,
-    scale: 1,
-  },
-  animate: {
-    opacity:0.91,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 80,
-      damping: 30,
-      mass: 1
-    }
-  },
-  whileHover: {
-    scale: 1.06,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      damping: 30,
-      mass: 1
-    }
-  }
-}
-
-const leafVariants = {
-  initial: {
-    opacity: 0,
-    scale: 0,
-  },
-  animate: {
-    opacity:0.95,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 250,
-      damping: 20,
-      mass: 2
-    }
-  },
-  whileHover: {
-    scale: 1.1,
-    opacity: 1,
-    rotate: -20,
-    transition: {
-      type: "spring",
-      stiffness: 200,
-      damping: 30,
-      mass: 3
-    }
-  }
-}
-
-const menuItemVariants = {
-  initial: {
-    opacity: 0,
-    scale: 0,
-  },
-  animate: (i) => ({
-    opacity:0.95,
-    scale: 1,
-    transition: {
-      type: "tween",
-      ease: "linear",
-      duration: 0.4,
-      delay: 0.052 * i,
-    }
-  }),
-  whileHover: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      type: "tween",
-      ease: "linear",
-      duration: 0.2
-    }
-  }
-}
-
-const underlineVariants = {
-  initial: {
-    scaleX: 0,
-    scaleY: 0,
-  },
-  animate: (i) => ({
-    scaleX: 0.76,
-    scaleY: 1,
-    transition: {
-      type: "tween",
-      ease: "circOut",
-      duration: 0.3,
-      delay: 0.052 * i,
-    }
-  }),
-  whileHover: {
-    scaleX: 1,
-    scaleY: 1.1,
-    transition: {
-      type: "tween",
-      ease: "circOut",
-      duration: 0.3
-    }
-  }
-}
-
-const menuVariants = {
-  initial: {
-    y: -500,
-    opacity: 0
-  },
-  animate: {
-    y: 0,
-    opacity: 1
-  },
-  exit: {
-    y: -500,
-    opacity: 0
-  }
-}
+import { logoVariants, leafVariants, menuItemVariants, underlineVariants, menuVariants } from "./headerVariants";
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -143,7 +22,7 @@ function Header() {
       <div className="rounded-xl flex flex-wrap items-center justify-center max-w-6xl p-1 mx-auto my-2
                   md:p-2 text-shadow-lg hover:text-shadow-xl">
         <Link to="/">
-          <motion.h1 variants={logoVariants} initial={"initial"} animate={"animate"} whileHover={logoVariants?.whileHover}  className="flex items-center text-white no-underline mb-2">
+          <motion.h1 id={"logo"} variants={logoVariants} initial={"initial"} animate={"animate"} whileHover={logoVariants?.whileHover}  className="flex items-center text-white no-underline mb-2">
             <motion.img variants={leafVariants} whileHover={leafVariants.whileHover} src={BigLeaf} alt="" className="mr-2 h-16" />
             <motion.span className="text-xl font-bold tracking-tight">
               {site.siteMetadata.title}
@@ -165,7 +44,7 @@ function Header() {
           </svg>
         </button>
 
-        <motion.nav layout variants={menuVariants}  animate={"animate"} initial={"initial"} exit={"exit"}
+        <motion.nav layout variants={menuVariants} id={"menu"}  animate={"animate"} initial={"initial"} exit={"exit"}
           className={`${
             isExpanded ? `block` : `hidden`
           } text-center md:block text-shadow-sm  w-full md:w-auto mt-0 lg:mt-1`}
@@ -207,7 +86,13 @@ function Header() {
               <motion.div custom={index} className="block text-shadow-xl font-semibold mt-4 text-white md:inline-block w-36 md:w-auto mx-auto md:mt-0 md:ml-6"
                           key={link.title} variants={menuItemVariants} animate={"animate"} initial={"initial"} whileHover={"whileHover"}>
                 <Link to={link.route}>
-                  <motion.div>
+                  <motion.div onClick={() => {
+                    setTimeout(() => {
+                      console.log(document?.getElementById("md-page"));
+                      document?.getElementById("md-page")?.scrollIntoView({ behavior: "smooth", inline: "end", block: "start" });
+                    }, 100);
+
+                  }}>
                     <span>{link.title}</span>
                     <motion.hr variants={underlineVariants} />
                   </motion.div>

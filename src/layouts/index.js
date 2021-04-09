@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
 import {motion} from "framer-motion";
-
+import {Helmet} from "react-helmet";
 import Header from "../components/header";
 import Transition from "../components/transition";
 
 function Layout({ children, location }) {
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900">
+      <Helmet title="HOPE Community Allotment, Sheffield" defer={false} />
       <Header />
 
       <main className="flex-1 w-full max-w-4xl px-4 py-4 mx-auto md:px-4 md:py-8">
@@ -76,10 +77,11 @@ function Layout({ children, location }) {
               <span className="md:leading-relaxed  text-xs">Grow <br/> Sheffield</span>
             </a>
           </p>
-          <p className="text-lg flex-1 leading-relaxed text-center font-green-500">
-            <span role="img" aria-label="Green Heart">
+          <p className="text-lg flex-1 leading-relaxed text-right justify-center items-end font-green-500 hover:cursor-pointer">
+            <span role="img" aria-label="Green Heart (scroll to top)">
               <motion.svg initial={{scale: 0.8, opacity: 0, pathLength: 0}} animate={{scale: 1, opacity: 1, pathLength: 1}}
-                          transition={{type: "spring", duration: 4, bounce: 3}} className={"stroke fill-current\t"} height={32} width={32} >
+                          whileHover={{scale: 1.2}} onClick={() => {document?.getElementById('logo').scrollIntoView({behavior: "smooth", inline: "start", block: "start"})}}
+                          transition={{type: "spring", duration: 4, bounce: 3}} className={"stroke fill-current float-right mr-2"} height={32} width={32} >
 <path id="heart-icon" d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454
   C30,20.335,16,28.261,16,28.261z"/>
     </motion.svg>
