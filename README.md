@@ -22,51 +22,27 @@ cd HopeAllotment/
 
 #### Install dependencies:
 
-```sh
-yarn
-```
+Yarn | NPM
+------------ | -------------
+``` yarn ``` | ``` npm install ```
 
-OR
+#### Install the Gatsby CLI (optional but recommended):
 
-```sh
-npm install
-```
-
-#### Install the Gatsby CLI:
-
-```sh
-yarn global add gatsby-cli
-```
-
-OR
-
-```sh
-npm i --global gatsby-cli
-```
+Yarn | NPM
+------------ | -------------
+``` yarn global add gatsby-cli ``` | ``` npm i --global gatsby-cli ```
 
 #### Run the development server:
 
-```sh
-yarn start
-```
-
-OR
-
-```sh
-npm run start
-```
+Yarn | NPM
+------------ | -------------
+``` yarn start ``` | ``` npm run start ```
 
 #### Deploy (if you have permissions):
 
-```sh
-yarn deploy
-```
-
-OR
-
-```sh
-npm run deploy
-```
+Yarn | NPM
+------------ | -------------
+``` yarn deploy ``` | ``` npm run deploy ```
 
 ## Resources
 
@@ -85,3 +61,6 @@ Enjoying HOPE allotment and want to help? You can:
 - [Create an issue](https://github.com/lewispollard/HopeAllotment/issues/new) with some constructive criticism
 - [Submit a pull request](https://github.com/lewispollard/HopeAllotment/compare) with some improvements to the project
 
+## Contributors
+
+Based on the `gatsby-starter-tailwind` template by @oddstronaut: https://github.com/oddstronaut/gatsby-starter-tailwind

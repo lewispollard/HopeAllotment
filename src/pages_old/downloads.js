@@ -1,12 +1,11 @@
 import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { SEO } from "../components";
 
-import Leaflet from "../../public/downloads/Leaflet_A4_2015.pdf";
-import Brochure from "../../public/downloads/Brochure - user.pdf";
-import BrochureImg from "../images/brochure_front.png";
-import LeafletImg from "../images/leaflet-front.png";
+import Leaflet from "../../content/downloads/Leaflet_A4_2015.pdf";
+import Brochure from "../../content/downloads/Brochure - user.pdf";
 
-const LeafletsPage = () => {
+const LeafletsPage = ({ data }) => {
   return (
     <div>
       <style
@@ -26,7 +25,7 @@ const LeafletsPage = () => {
         title="Leaflets"
       />
       <main className="text-center">
-        <h2 className="inline-block p-3 mb-6 text-2xl font-bold headingpattern uppercase">
+        <h2 className="inline-block p-3 mb-6 text-2xl font-bold heading-pattern uppercase">
           Leaflets &amp; Downloads
         </h2>
 
@@ -39,17 +38,24 @@ const LeafletsPage = () => {
             <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
               Poster
             </h2>
-            <hr />
-            <img src={LeafletImg} className="mx-auto" />
+            <GatsbyImage
+              image={data.leaflet.childImageSharp.gatsbyImageData}
+              className="mx-auto shadow-lg"
+              alt="Leaflet front cover"
+              objectFit="scale-down" />
           </a>
         </div>
+        <hr className="mt-6" />
         <div className="mx-auto max-w-screen-sm mt-6">
           <a href={Brochure} target="_blank" rel="noopener noreferrer" download>
             <h2 className="inline-block p-1 mb-2 text-l font-bold bg-teal-600 text-white uppercase">
               Brochure
             </h2>
-            <hr />
-            <img src={BrochureImg} className="mx-auto" />
+            <GatsbyImage
+              image={data.brochure.childImageSharp.gatsbyImageData}
+              className="mx-auto shadow-lg"
+              alt="Brochure front cover"
+              objectFit="scale-down" />
           </a>
         </div>
       </main>
