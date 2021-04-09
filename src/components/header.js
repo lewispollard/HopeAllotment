@@ -100,7 +100,7 @@ function Header() {
               </motion.div>
           ))}
           <motion.a
-            className="block mt-5 mb-2 text-white no-underline md:mb-0 md:inline-block md:mt-0 md:ml-6 md:pr-3"
+            className="block mt-4 mb-2 text-white no-underline md:mb-1.5 md:inline-block md:mt-0 md:ml-6 md:pr-3"
             href={"https://www.facebook.com/tcvallotment/"}
             variants={menuItemVariants}
             initial={"initial"}
