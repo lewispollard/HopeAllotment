@@ -19,7 +19,7 @@ function Header() {
   return (
     <header className="header_pattern">
       <AnimatePresence>
-      <div className="rounded-xl flex flex-wrap items-center justify-center max-w-6xl p-1 mx-auto my-2
+      <div className="rounded-xl flex flex-wrap items-center justify-evenly max-w-6xl p-1 mx-auto my-2
                   md:p-2 text-shadow-lg hover:text-shadow-xl">
         <Link to="/">
           <motion.h1 id={"logo"} variants={logoVariants} initial={"initial"} animate={"animate"} whileHover={logoVariants?.whileHover}  className="flex items-center text-white no-underline mb-2">
@@ -31,7 +31,7 @@ function Header() {
         </Link>
 
         <button
-          className="items-center mx-auto block px-3 py-2 text-white border border-white rounded md:hidden"
+          className=" block px-3 py-2 text-white border border-white rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
