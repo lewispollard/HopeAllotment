@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import SEO from "../components/seo";
 
 function ContactPage() {
@@ -28,7 +27,7 @@ function ContactPage() {
                     "Content-type": "application/json; charset=UTF-8",
                 },
                 body: JSON.stringify({
-                    toEmails: ["lewiji+aws@gmail.com"],//["hope.allotments@gmail.com"],
+                    toEmails: [process?.env?.GATSBY_CONTACT_FORM_ADDRESS],
                     subject: "hopeallotment.org.uk: New contact form message",
                     message: `
                         <h4>New message from HOPE website</h4>
@@ -57,6 +56,7 @@ function ContactPage() {
                 setSuccess("");
             }
         } catch (e) {
+            console.log(e);
             setError("Failed to send email. Please try again later.");
             setSubmitting(false);
             setSuccess("");
@@ -80,7 +80,6 @@ function ContactPage() {
                         We are always looking for new people who want to take an active role
                         in our group.
                     </p>
-                    <p className="mb-2"></p>
                     <p className="mb-2">
                         If you want to meet new people, get more exercise, or simply have a
                         keen interest in gardening, we want to hear from you.
@@ -88,10 +87,9 @@ function ContactPage() {
                     <p className="mb-6">Please leave a contact message below.</p>
                 </div>
 
-                <div className=" text-green-700 font-semibold text-2xl">{success}</div>
+                <div className=" text-green-700 font-semibold text-2xl mb-3">{success}</div>
                 <div className="text-red-600 font-semibold mb-3">{error}</div>
-
-                <form className="mx-auto md:w-1/2" method="post" action={functionURL}>
+                {!success && <form className="mx-auto md:w-1/2 mt-2" method="post" action={functionURL}>
                     <label
                         className="block mb-2 text-xs text-left font-bold uppercase"
                         htmlFor="name"
@@ -100,10 +98,11 @@ function ContactPage() {
                     </label>
 
                     <input
-                        className="w-full mb-6 form-input"
+                        className={`w-full mb-6 form-input ${submitting ? "bg-gray-300 opacity-50" : ""}`}
                         id="name"
                         placeholder="Your Name"
                         type="text"
+                        disabled={submitting}
                         onChange={(e) => {
                             setName(e.target.value);
                         }}
@@ -118,10 +117,11 @@ function ContactPage() {
                     </label>
 
                     <input
-                        className="w-full mb-6 form-input"
+                        className={`w-full mb-6 form-input ${submitting ? "bg-gray-300 opacity-50" : ""}`}
                         id="email"
                         placeholder="Your Email"
                         type="text"
+                        disabled={submitting}
                         onChange={(e) => {
                             setEmail(e.target.value);
                         }}
@@ -136,10 +136,11 @@ function ContactPage() {
                     </label>
 
                     <input
-                        className="w-full mb-6 form-input"
+                        className={`w-full mb-6 form-input ${submitting ? "bg-gray-300 opacity-50" : ""}`}
                         id="phone"
                         placeholder="Your Phone Number"
                         type="text"
+                        disabled={submitting}
                         onChange={(e) => {
                             setPhone(e.target.value);
                         }}
@@ -154,10 +155,11 @@ function ContactPage() {
                     </label>
 
                     <textarea
-                        className="w-full mb-6 form-textarea"
+                        className={`w-full mb-6 form-textarea ${submitting ? "bg-gray-300 opacity-50" : ""}`}
                         id="message"
                         placeholder="Say something..."
                         rows="8"
+                        disabled={submitting}
                         onChange={(e) => {
                             setMessage(e.target.value);
                         }}
@@ -167,12 +169,12 @@ function ContactPage() {
                     <button
                         disabled={submitting}
                         onClick={onSubmit}
-                        className="px-4 py
-                        if (submitting) return;-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600"
+                        className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600"
                     >
                         Submit
                     </button>
                 </form>
+                }
             </section>
         </div>
     );
