@@ -20,31 +20,37 @@ function ContactPage() {
             return;
         }
         setSubmitting(true);
-        const response = await fetch(functionURL, {
-            method: "post",
-            headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-            },
-            body: new URLSearchParams({
-                toEmails: ["lewiji+aws@gmail.com"],//["hope.allotments@gmail.com"],
-                subject: "hopeallotment.org.uk: New contact form message",
-                message: `Name: ${name} \n Email: ${email} \n Phone: ${phone} \n Message: ${message}`,
-            }).toString(),
-        });
-        if (response.status === 200) {
-            setError(false);
-            setSubmitting(false);
-            setEmail("");
-            setName("");
-            setPhone("");
-            setMessage("");
-            setSuccess("Message sent successfully. Someone will be in touch soon!");
-        } else {
-            const json = await response.json();
+        try {
+            const response = await fetch(functionURL, {
+                method: "post",
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8",
+                },
+                body: {
+                    toEmails: ["lewiji+aws@gmail.com"],//["hope.allotments@gmail.com"],
+                    subject: "hopeallotment.org.uk: New contact form message",
+                    message: `Name: ${name} \n Email: ${email} \n Phone: ${phone} \n Message: ${message}`,
+                }
+            });
+            if (response.status === 200) {
+                setError(false);
+                setSubmitting(false);
+                setEmail("");
+                setName("");
+                setPhone("");
+                setMessage("");
+                setSuccess("Message sent successfully. Someone will be in touch soon!");
+            } else {
+                setError("Failed to send email. Please try again later.");
+                setSubmitting(false);
+                setSuccess("");
+            }
+        } catch (e) {
             setError("Failed to send email. Please try again later.");
             setSubmitting(false);
             setSuccess("");
         }
+
     };
 
     return (
