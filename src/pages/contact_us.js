@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import SEO from "../components/seo";
 
 function ContactPage() {
-    const functionURL = "https://i5a4oar5p3.execute-api.eu-west-2.amazonaws.com/Prod/send";
+    const functionURL = "https://86rfxjzco8.execute-api.eu-west-2.amazonaws.com/Prod/send";
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -15,6 +15,7 @@ function ContactPage() {
 
     const onSubmit = async (event) => {
         event.preventDefault();
+        if (submitting) return;
         if (name == "" || email == "" || message == "") {
             setError("Name, email and message fields are required.");
             return;
@@ -26,13 +27,13 @@ function ContactPage() {
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
                 },
-                body: {
+                body: JSON.stringify({
                     toEmails: ["lewiji+aws@gmail.com"],//["hope.allotments@gmail.com"],
                     subject: "hopeallotment.org.uk: New contact form message",
-                    message: `Name: ${name} \n Email: ${email} \n Phone: ${phone} \n Message: ${message}`,
-                }
+                    message: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Message:<br/> ${message}</p>`,
+                })
             });
-            if (response.status === 200) {
+            if (response.status === 200 || response.status === 204) {
                 setError(false);
                 setSubmitting(false);
                 setEmail("");
@@ -156,7 +157,8 @@ function ContactPage() {
                     <button
                         disabled={submitting}
                         onClick={onSubmit}
-                        className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600"
+                        className="px-4 py
+                        if (submitting) return;-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600"
                     >
                         Submit
                     </button>
