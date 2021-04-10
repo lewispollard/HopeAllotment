@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run build --if-present
+    - run: GATSBY_CONTACT_FORM_ADDRESS=${{ secrets.GATSBY_CONTACT_FORM_ADDRESS }} npm run build --if-present
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
