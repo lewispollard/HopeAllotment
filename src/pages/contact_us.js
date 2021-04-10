@@ -30,7 +30,17 @@ function ContactPage() {
                 body: JSON.stringify({
                     toEmails: ["lewiji+aws@gmail.com"],//["hope.allotments@gmail.com"],
                     subject: "hopeallotment.org.uk: New contact form message",
-                    message: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Message:<br/> ${message}</p>`,
+                    message: `
+                        <h4>New message from HOPE website</h4>
+                        <p>Someone has left a message.</p>
+                        <hr/>
+                        <p>Name: ${name}</p>
+                        <hr />
+                        <p>Email: ${email}</p>
+                        <hr />
+                        <p>Phone: ${phone}</p>
+                        <hr />
+                        <p>Message:<br/> ${message.replace(/(<([^>]+)>)/gi, "<br/>")}</p>`,
                 })
             });
             if (response.status === 200 || response.status === 204) {
