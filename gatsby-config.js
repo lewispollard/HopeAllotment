@@ -3,6 +3,8 @@ const resolveConfig = require("tailwindcss/resolveConfig");
 const tailwindConfig = require("./tailwind.config.js");
 const path = require("path");
 
+require("dotenv").config({ path: '.env.${process.env.NODE_ENV}', })
+
 const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
@@ -35,6 +37,14 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: [
+          "GATSBY_CONTACT_FORM_ADDRESS",
+        ]
+      }
     },
     {
       resolve: "gatsby-plugin-page-creator",

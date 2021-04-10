@@ -27,7 +27,7 @@ function ContactPage() {
                     "Content-type": "application/json; charset=UTF-8",
                 },
                 body: JSON.stringify({
-                    toEmails: [process?.env?.GATSBY_CONTACT_FORM_ADDRESS],
+                    toEmails: ["hope.allotments@gmail.com"],
                     subject: "hopeallotment.org.uk: New contact form message",
                     message: `
                         <h4>New message from HOPE website</h4>
