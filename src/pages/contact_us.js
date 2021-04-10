@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import SEO from "../components/seo";
 
 function ContactPage() {
-    const functionURL = "https://almond-fox-7125.twil.io/send-email";
+    const functionURL = "https://i5a4oar5p3.execute-api.eu-west-2.amazonaws.com/Prod/send";
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -26,11 +26,9 @@ function ContactPage() {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
             },
             body: new URLSearchParams({
-                fromEmail: email,
-                subject: "New message from HOPE allotment website",
-                body: message,
-                name,
-                phone,
+                toEmails: ["lewiji+aws@gmail.com"],//["hope.allotments@gmail.com"],
+                subject: "hopeallotment.org.uk: New contact form message",
+                message: `Name: ${name} \n Email: ${email} \n Phone: ${phone} \n Message: ${message}`,
             }).toString(),
         });
         if (response.status === 200) {
