@@ -61,13 +61,13 @@ export const menuItemVariants = {
         scale: 0,
     },
     animate: (i) => ({
-        opacity:0.95,
+        opacity:0.97,
         scale: 1,
         transition: {
             type: "tween",
             ease: "linear",
-            duration: 0.4,
-            delay: 0.052 * i,
+            duration: 0.2,
+            delay: 0.032 * i,
         }
     }),
     whileHover: {
@@ -109,7 +109,7 @@ export const underlineVariants = {
 
 export const menuVariants = {
     initial: {
-        y: -500,
+        y: 0,
         opacity: 0
     },
     animate: {
@@ -117,7 +117,7 @@ export const menuVariants = {
         opacity: 1
     },
     exit: {
-        y: -500,
+        y: 0,
         opacity: 0
     }
 }
