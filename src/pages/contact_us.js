@@ -71,7 +71,7 @@ function ContactPage() {
                 title="Contact"
             />
             <section className="text-center">
-                <h2 className="inline-block p-3 mb-6 text-2xl mx-auto font-bold heading-pattern uppercase">
+                <h2 className="inline-block p-3 mb-6 text-2xl mx-auto font-bold heading_pattern uppercase">
                     Contact Us
                 </h2>
                 <div className="font-medium flex flex-col mx-auto tracking-normal md:tracking-wide text-justify w-3/4">

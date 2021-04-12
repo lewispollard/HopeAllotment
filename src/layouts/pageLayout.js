@@ -12,9 +12,13 @@ const headingVariants = {
 export default function Template({ children, pageContext, data, ...props}) {
   return (
     <article id={"md-page"} className="md-page prose prose-green flex flex-col justify-start items-center">
-      <motion.h1 initial={"initial"} animate={"animate"} exit={"exit"} variants={headingVariants} className={"heading_pattern"}>{pageContext?.frontmatter?.title}</motion.h1>
-      <h4 className={"md-date"}><span className={"font-light"}> Published on </span> {pageContext?.frontmatter?.date}</h4>
+      <motion.h1 initial={"initial"} animate={"animate"} exit={"exit"} variants={headingVariants} className={"heading_pattern"}>
+          {pageContext?.frontmatter?.title}
+      </motion.h1>
 
+      <h4 className={"md-date"}>
+          <span className={"font-light"}> Published on </span> {pageContext?.frontmatter?.date}
+      </h4>
 
       {children}
     </article>
