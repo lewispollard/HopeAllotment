@@ -11,6 +11,7 @@ module.exports = {
     title: `HOPE Community Allotment`,
     description: `Home of the HOPE community allotment project, Sheffield, UK.`,
     author: `HOPE Community Allotment`,
+    siteUrl: `https://hopeallotment.org.uk`,
   },
   plugins: [
     `gatsby-plugin-eslint`,
@@ -88,6 +89,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
   ],
 };
